@@ -7,7 +7,22 @@
 [which LLM provider you’re using today]
 
 ## Setup
-[how to create/activate venv and install dependencies]
+
+To begin, you need to create a virtual environment and activate it.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+Then, install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+To begin, you need to copy .env.example to .env and set OPENAI_API_KEY.
+Ensure you do not commit .env by adding it to .gitignore.
 
 ## Running Day 1
 [exact command(s) to run the script]
