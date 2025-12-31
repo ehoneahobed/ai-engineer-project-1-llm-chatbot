@@ -25,7 +25,12 @@ To begin, you need to copy .env.example to .env and set OPENAI_API_KEY.
 Ensure you do not commit .env by adding it to .gitignore.
 
 ## Running Day 1
-[exact command(s) to run the script]
+To execute day 1 script, run the following commands:
+
+```bash
+source .venv/bin/activate
+python -m src.day_01.day_01_hello_world
+```
 
 ## Troubleshooting
 [include at least “missing API key” and “venv not activated”]
