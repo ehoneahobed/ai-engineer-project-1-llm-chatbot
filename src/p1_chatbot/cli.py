@@ -24,6 +24,11 @@ api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=api_key)
 model_name = "gpt-4o-mini"
 
+EXERCISE_MAX_CONTEXT_TOKENS = 4096
+RESERVED_OUTPUT_TOKENS = 500
+TRUNCATE_THRESHOLD_TOKENS = 3500
+
+
 def main():
     messages: list[dict[str, str]] = []
     while True:
