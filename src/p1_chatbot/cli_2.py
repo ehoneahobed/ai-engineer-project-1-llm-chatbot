@@ -57,6 +57,7 @@ def main():
         completion = client.chat.completions.create(
             model=model_name,
             messages=messages,
+            max_tokens=RESERVED_OUTPUT_TOKENS
         )
         response = completion.choices[0].message.content
         print(response)
