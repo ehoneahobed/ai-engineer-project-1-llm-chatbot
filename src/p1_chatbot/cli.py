@@ -17,10 +17,12 @@ Typing an empty line does not call the LLM.
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
+from .tokens import count_tokens
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=api_key)
+model_name = "gpt-4o-mini"
 
 def main():
     messages: list[dict[str, str]] = []
@@ -31,8 +33,10 @@ def main():
         if not user_input.strip():
             continue
         messages.append({"role": "user", "content": user_input})
+        input_tokens_estimate = count_tokens(messages, model_name)
+        print(f"Tokens (estimated input): {input_tokens_estimate}")
         completion = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model=model_name,
             messages=messages,
         )
         response = completion.choices[0].message.content
