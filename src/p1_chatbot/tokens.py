@@ -1,10 +1,5 @@
-# EXERCISE_MAX_CONTEXT_TOKENS = 4096
 """
-    Your implementation must:
-
-    use tiktoken.encoding_for_model(model) when possible
-    fall back to tiktoken.get_encoding("cl100k_base") if the model is unknown
-count tokens from both role and content fields (simple concatenation is fine)
+This function counts the number of tokens in a list of messages.
 """
 import tiktoken
 
