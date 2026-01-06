@@ -30,9 +30,15 @@ python -m src.p1_chatbot.cli
 
 To execute day 5 script, run the following commands:
 
+a. few shot task
 ```bash
 source .venv/bin/activate
 python -m src.day_05.day_05_few_shot
+```
+b. zero shot vs step by step reasoning compare task
+```bash
+source .venv/bin/activate
+python -m src.day_05.day_05_reasoning_compare
 ```
 
 To begin, you need to copy .env.example to .env and set OPENAI_API_KEY.
