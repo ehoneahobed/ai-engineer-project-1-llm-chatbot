@@ -28,6 +28,13 @@ source .venv/bin/activate
 python -m src.p1_chatbot.cli
 ```
 
+To execute day 5 script, run the following commands:
+
+```bash
+source .venv/bin/activate
+python -m src.day_05.day_05_few_shot
+```
+
 To begin, you need to copy .env.example to .env and set OPENAI_API_KEY.
 Ensure you do not commit .env by adding it to .gitignore.
 
