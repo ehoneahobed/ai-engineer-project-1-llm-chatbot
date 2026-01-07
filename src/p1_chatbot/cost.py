@@ -1,20 +1,16 @@
 """
-Create a deterministic cost estimator.
-
-Files to create
-Create src/p1_chatbot/cost.py with:
-
-a MODEL_PRICING_USD_PER_1M: dict[str, tuple[float, float]] mapping model → (input_per_1m, output_per_1m)
-def estimate_cost(model: str, input_tokens: int, output_tokens: int) -> float:
-docstrings and type hints
-Rules:
-
-estimate_cost returns a float USD value (e.g., 0.000123)
-if the model is not in the dict, raise a ValueError with a clear message
+A script to estimate the cost of tokens used in a chatbot's conversation.
 """
 
 MODEL_PRICING_USD_PER_1M = {
+    "gpt-5.2": (1.75, 14.00),
+    "gpt-5.1": (1.25, 10.00),
+    "gpt-5": (1.25, 10.00),
+    "gpt-5-mini": (0.25, 2.00),
+    "gpt-5-nano": (0.05, 0.40),
     "gpt-4o-mini": (0.15, 0.60),
+    "gpt-4o": (2.50, 10.00),
+    "gpt-4o-2024-05-13": (50.00, 15.00),
 }
 
 def estimate_cost(model: str, input_tokens: int, output_tokens: int) -> float:
