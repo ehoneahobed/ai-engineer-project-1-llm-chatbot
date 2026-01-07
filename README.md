@@ -54,3 +54,10 @@ python -m src.day_01.day_01_hello_world
 
 ## Troubleshooting
 [include at least “missing API key” and “venv not activated”]
+
+## Pricing source
+model name: gpt-4o-mini
+price per 1,000,000 input tokens: $0.15
+price per 1,000,000 output tokens: $0.60
+the date you recorded it (YYYY-MM-DD): 2025-01-06
+the source URL as plain text (you can paste the provider pricing page): https://platform.openai.com/docs/pricing 
